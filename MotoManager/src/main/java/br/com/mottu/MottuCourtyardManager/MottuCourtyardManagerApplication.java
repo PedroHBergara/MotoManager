@@ -1,13 +1,13 @@
-package br.com.mottu.MotoManager;
+package br.com.mottu.MottuCourtyardManager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MotoManagerApplication {
+public class MottuCourtyardManagerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MotoManagerApplication.class, args);
+		SpringApplication.run(MottuCourtyardManagerApplication.class, args);
 	}
 
 }

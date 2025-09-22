@@ -1,10 +1,10 @@
-package br.com.mottu.MotoManager;
+package br.com.mottu.MottuCourtyardManager;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MotoManagerApplicationTests {
+class MottuCourtyardManagerApplicationTests {
 
 	@Test
 	void contextLoads() {
