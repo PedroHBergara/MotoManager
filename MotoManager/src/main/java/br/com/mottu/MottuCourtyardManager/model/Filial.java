@@ -1,9 +1,8 @@
 package br.com.mottu.MottuCourtyardManager.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import java.util.ArrayList; // Importar ArrayList
+import java.util.List;
 
 @Entity
 public class Filial {
@@ -11,10 +10,15 @@ public class Filial {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String nome;
     private String pais;
     private String logradouro;
+    // qtdPatios removido
+
+    @OneToMany(mappedBy = "filial", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY) // Adicionado FetchType.LAZY
+    private List<Patio> patios = new ArrayList<>(); // Inicializar a lista
+
+    // Getters e Setters (sem qtdPatios)
 
     public Long getId() {
         return id;
@@ -46,5 +50,13 @@ public class Filial {
 
     public void setLogradouro(String logradouro) {
         this.logradouro = logradouro;
+    }
+
+    public List<Patio> getPatios() {
+        return patios;
+    }
+
+    public void setPatios(List<Patio> patios) {
+        this.patios = patios;
     }
 }

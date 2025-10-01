@@ -1,9 +1,6 @@
 package br.com.mottu.MottuCourtyardManager.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Patio {
@@ -11,8 +8,16 @@ public class Patio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private int qtdMotos;
+    // nomeFilial removido
     private int numPatio;
+
+    @ManyToOne(fetch = FetchType.LAZY) // Adicionado FetchType.LAZY
+    @JoinColumn(name = "filial_id", nullable = false) // Adicionado nullable = false
+    private br.com.mottu.MottuCourtyardManager.model.Filial filial;
+
+    // Getters e Setters (sem nomeFilial)
 
     public Long getId() {
         return id;
@@ -36,5 +41,13 @@ public class Patio {
 
     public void setNumPatio(int numPatio) {
         this.numPatio = numPatio;
+    }
+
+    public br.com.mottu.MottuCourtyardManager.model.Filial getFilial() {
+        return filial;
+    }
+
+    public void setFilial(br.com.mottu.MottuCourtyardManager.model.Filial filial) {
+        this.filial = filial;
     }
 }
