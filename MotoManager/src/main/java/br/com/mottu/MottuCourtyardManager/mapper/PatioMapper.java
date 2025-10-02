@@ -1,6 +1,6 @@
 package br.com.mottu.MottuCourtyardManager.mapper;
 
-import br.com.mottu.MottuCourtyardManager.PatioRequest;
+import br.com.mottu.MottuCourtyardManager.dto.PatioRequest;
 import br.com.mottu.MottuCourtyardManager.dto.PatioResponse;
 import br.com.mottu.MottuCourtyardManager.model.Filial;
 import br.com.mottu.MottuCourtyardManager.model.Patio;

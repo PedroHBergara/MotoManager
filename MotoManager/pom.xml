@@ -74,6 +74,18 @@
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
 			<version>2.5.0</version> <!-- versão estável atual -->
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-oauth2-client</artifactId>
+			<version>6.3.3</version> <!-- ajuste conforme a versão do Spring que você está usando -->
+		</dependency>
+
+		<!-- OAuth2 JOSE (JWT, JWS, JWE, etc) -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-oauth2-jose</artifactId>
+			<version>6.3.3</version>
+		</dependency>
 	</dependencies>
 
 	<build>

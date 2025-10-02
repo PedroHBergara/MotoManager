@@ -1,4 +1,4 @@
-package br.com.fiap.challengemottu.service; // Changed package
+package br.com.mottu.MottuCourtyardManager.service; // Changed package
 
 import br.com.mottu.MottuCourtyardManager.dto.PatioRequest;
 import br.com.mottu.MottuCourtyardManager.dto.PatioResponse;

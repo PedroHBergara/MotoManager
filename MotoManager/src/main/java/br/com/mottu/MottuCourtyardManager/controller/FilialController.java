@@ -2,7 +2,7 @@ package br.com.mottu.MottuCourtyardManager.controller;
 
 import br.com.mottu.MottuCourtyardManager.dto.FilialRequest;
 import br.com.mottu.MottuCourtyardManager.dto.FilialResponse;
-import br.com.fiap.challengemottu.service.FilialService;
+import br.com.mottu.MottuCourtyardManager.service.FilialService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
